@@ -1,0 +1,42 @@
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  position: fixed;
+  transition: all 0.55s ease;
+  top: 0;
+}
+
+.navbar__black {
+  background-color: black;
+}
+
+.navbar__ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin: 0;
+  align-items: center;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__logo {
+  position: fixed;
+  top: 23px;
+  max-height: 3%;
+  width: fit-content;
+}
+
+.navbar__avatar {
+  position: fixed;
+  max-width: 40px;
+  height: fit-content;
+  top: 15px;
+  right: 50px;
+}
