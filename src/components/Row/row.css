@@ -1,0 +1,21 @@
+.row__cards {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  gap: 7px;
+  padding: 2rem;
+}
+
+.row__card {
+  min-width: 300px;
+  min-height: 150px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+  padding: 1rem;
+  gap: 5px;
+  transition: all 0.55s ease;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

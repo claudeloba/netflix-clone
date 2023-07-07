@@ -1,5 +1,5 @@
 import "./navbar.css";
-import logo from "../assets/Netflix_2015_logo.svg.png";
+import logo from "../../assets/Netflix_2015_logo.svg.png";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
@@ -23,13 +23,17 @@ const NavBar = () => {
     <nav className={`navbar ${show && "navbar__black"}`}>
       <ul className="navbar__ul">
         <a href="/">
-          <img src={logo} alt="company logo" className="navbar__logo" />
+          <img
+            src={logo}
+            alt="company logo"
+            className={`navbar__logo ${show && "navbar__logo--scroll"}`}
+          />
         </a>
         <a href="/">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
             alt="avatar"
-            className="navbar__avatar"
+            className={`navbar__avatar ${show && "navbar__avatar--scroll"}`}
           />
         </a>
       </ul>

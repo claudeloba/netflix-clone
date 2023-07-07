@@ -7,10 +7,12 @@
   position: fixed;
   transition: all 0.55s ease;
   top: 0;
+  z-index: 1;
 }
 
 .navbar__black {
   background-color: black;
+  height: 55px;
 }
 
 .navbar__ul {
@@ -29,8 +31,14 @@ a {
 .navbar__logo {
   position: fixed;
   top: 23px;
-  max-height: 3%;
+  max-height: 4%;
   width: fit-content;
+  transition: all 0.55s ease;
+}
+
+.navbar__logo--scroll {
+  max-height: 2%;
+  top: 19px;
 }
 
 .navbar__avatar {
@@ -38,5 +46,12 @@ a {
   max-width: 40px;
   height: fit-content;
   top: 15px;
+  right: 50px;
+  transition: all 0.55s ease;
+}
+
+.navbar__avatar--scroll {
+  max-width: 25px;
+  top: 14px;
   right: 50px;
 }
