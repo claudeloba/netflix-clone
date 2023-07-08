@@ -3,19 +3,94 @@
   flex-flow: row nowrap;
   overflow-x: scroll;
   gap: 7px;
-  padding: 2rem;
+  padding: 1rem 2rem;
+}
+
+.row__cards::-webkit-scrollbar {
+  display: none;
 }
 
 .row__card {
-  min-width: 300px;
-  min-height: 150px;
-  border-radius: 4px;
+  border-radius: 10px;
+  min-width: 150px;
+  min-height: 225px;
   display: flex;
   justify-content: flex-end;
   flex-flow: column wrap;
   padding: 1rem;
   gap: 5px;
-  transition: all 0.55s ease;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-size: 100%;
+  transition: all 0.45s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+    background-size: 105%;
+    opacity: 0.7;
+  }
+}
+
+.row__card--large {
+  min-width: 400px;
+  min-height: 220px;
+  margin-inline: 3px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 0;
+  box-shadow: none;
+}
+
+.row__title {
+  font-weight: 700;
+  padding: 0 2rem;
+  margin: 0;
+
+  font-size: 1.7rem;
+}
+
+.row {
+  padding: 0px;
+  margin-top: 1.2rem;
+}
+
+.row__fade {
+  border-radius: 5px;
+  grid-area: 1 / 1 / 5 / 2;
+  background-image: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0),
+    rgba(17, 17, 17, 0),
+    rgba(17, 17, 17, 0.2),
+    rgb(17, 17, 17, 0.7),
+    rgb(17, 17, 17, 0.9)
+  );
+  transition: all 0.45s ease;
+
+  &:hover {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0));
+    transform: scale(1.04);
+  }
+}
+
+.row__movieTitle {
+  grid-area: 4 / 1 / 5 / 2;
+  margin-left: auto;
+  padding-inline: 1rem;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  transition: all 0.45s ease;
+
+  &:hover {
+    opacity: 0;
+  }
+}
+.row__card:hover .row__movieTitle,
+.row__card--large:hover .row__movieTitle {
+  opacity: 0;
 }

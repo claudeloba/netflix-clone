@@ -8,12 +8,12 @@
 
 .banner__content {
   margin-left: 30px;
-  padding-top: 140px;
+  padding-top: 180px;
   height: 190px;
 }
 
 .banner__title {
-  font-weight: 800;
+  font-weight: 700;
   padding-bottom: 0.3rem;
   font-size: 3rem;
   text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

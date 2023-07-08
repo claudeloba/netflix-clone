@@ -9,7 +9,11 @@ const Banner = () => {
     error,
   } = useFetch(requests.fetchNetflixOriginals);
 
-  const randomMovie = movie[Math.floor(Math.random() * movie.length - 1)];
+  let randomMovie;
+  if (movie && movie.length > 0) {
+    const randomIndex = Math.floor(Math.random() * movie.length);
+    randomMovie = movie[randomIndex];
+  }
 
   if (pending) {
     return (
@@ -53,7 +57,7 @@ const Banner = () => {
         ),
         url("https://image.tmdb.org/t/p/original${randomMovie?.backdrop_path}")
     `,
-        backgroundPosition: "center center",
+        backgroundPosition: "center 10%",
       }}
     >
       <div className="banner__content">
@@ -64,7 +68,7 @@ const Banner = () => {
         </h1>
         <div className="banner__buttons">
           <button className="banner__button">Play</button>
-          <button className="banner__button">Add</button>
+          <button className="banner__button">More info</button>
         </div>
         <h1 className="banner__description">
           {truncate(randomMovie.overview, 170)}

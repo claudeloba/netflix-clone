@@ -9,13 +9,13 @@ const HomeScreen = () => {
     <div className="homeScreen">
       <NavBar />
       <Banner />
+      <Row title="Trending" fetchURL={requests.fetchTrending} isLargeRow />
+      <Row title="Top Rated" fetchURL={requests.fetchTopRated} />
       <Row
         title="Netflix Originals"
         fetchURL={requests.fetchNetflixOriginals}
         isLargeRow
       />
-      <Row title="Action" fetchURL={requests.fetchTrending} />
-      <Row title="Action" fetchURL={requests.fetchTopRated} />
       <Row title="Action" fetchURL={requests.fetchActionMovies} />
       <Row title="Comedy" fetchURL={requests.fetchComedyMovies} />
       <Row title="Horror" fetchURL={requests.fetchHorrorMovies} />
